@@ -110,7 +110,8 @@ library(ggplot2)
 library(tidyverse)
 
 data("mpg")
-hist(mpg$hwy, main= "Histogram of the hwy variable", xlab= "mpg on hwy", col= c("bisque","salmon","coral","coral2","bisque","cornsilk","cornsilk"))
+hist(mpg$hwy, main= "Histogram of the hwy variable", xlab= "mpg on hwy", 
+     col= c("bisque","salmon","coral","coral2","bisque","cornsilk","cornsilk"))
 
 ```
 
