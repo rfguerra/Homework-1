@@ -21,7 +21,6 @@ library(corrplot)
 
 ```
 
-
 ##### Machine Learning Main Ideas
 
 **1.**
