@@ -1,6 +1,8 @@
+
 **Homework 1 - Rene Guerra**
 
 ##### Machine Learning Main Ideas
+
 
 **1.**
 
@@ -17,7 +19,8 @@ discovery.
 
 **2.**
 
-Regression model represents a quantitative response Y such that it describes numerical relationships between variables. Predicts a continuous quantity.
+Regression model represents a quantitative response Y such that it describes 
+numerical relationships between variables. Predicts a continuous quantity.
 
 Classification model represents a qualitative response Y such as categorical 
 values. Predicts distinct value labels, discrete.
@@ -35,8 +38,8 @@ Error Rate.
 Descriptive models interpret patterns in data by utilizing a visual approach 
 such as graphs or scatter plots. This can derive details about trends for the information.
 
-Inferential models take significant features to test theories about a 
-collection of data, and determine a connection between predictors and results.
+Inferential models take significant features to test theories about a collection 
+of data, and determine a connection between predictors and results.
 
 Predictive models use the best fitting combination of features to describe data. 
 They attempt to predict a response Y with reducible and minimized error, without necessarily testing hypothesis.
@@ -46,27 +49,28 @@ They attempt to predict a response Y with reducible and minimized error, without
 Mechanistic modeling utilize theoretical information to predict potential 
 outcomes in an event. Empirically-driven modeling takes already known results 
 from data to derive theories. These models differ in assumption of parametric 
-forms, number of observations, and flexibility. Mechanistic modeling initially assumes a parametric form, it's not exact to the collection of predictors, and 
-it's not flexible with limited parameters. On the other hand, 
-empirically-driven modeling does not assume predictors, requires more 
-observations, and it is flexible. When many parameters are added in the 
-mechanistic model, it derives over fitting similar to empirically-driven data.
+forms, number of observations, and flexibility. Mechanistic modeling initially 
+assumes a parametric form, it's not exact to the collection of predictors, and 
+it's not flexible with limited parameters. On the other hand, empirically-driven modeling does not assume predictors, requires more observations, and it is 
+flexible. When many parameters are added in the mechanistic model, it derives 
+over fitting similar to empirically-driven data.
 
 Empirically-driven modeling is more flexible since a large number of 
-observations are performed but no assumption of results are made. However, 
-by the bias-variance trade-off, interpretability is inversely related to 
+observations are performed but no assumption of results are made. However, by 
+the bias-variance trade-off, interpretability is inversely related to 
 flexibility. Thus, mechanistic modeling with few parameters is easier to 
 interpret.
 
-Bias-variance trade-off shows the inverse relationship between bias and 
-variance for parameters. It is relevant to mechanistic and empirically-driven 
-models because it derives changes in the models' flexibility/complexity. As the variance increases and bias decreases, complexity for the model increases.
+Bias-variance trade-off shows the inverse relationship between bias and variance 
+for parameters. It is relevant to mechanistic and empirically-driven models 
+because it derives changes in the models' flexibility/complexity. As the 
+variance increases and bias decreases, complexity for the model increases.
 
 **6.**
 
-"Given a voter's profile/data, how likely is it that they will vote in favor 
-of the candidate?" is a predictive question because the model wants to predict 
-a response Y from given data with minimal error. It does not attempt to derive hypothesis testing because there is no specific question in the statement 
+"Given a voter's profile/data, how likely is it that they will vote in favor of 
+the candidate?" is a predictive question because the model wants to predict a 
+response Y from given data with minimal error. It does not attempt to derive hypothesis testing because there is no specific question in the statement 
 derived from the quantitative data.
 
 "How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?" is an inferential question because it 
@@ -89,9 +93,9 @@ hist(mpg$hwy, main= "Histogram of the hwy variable", xlab= "mpg on hwy", col= c(
 
 This histogram shows the frequency of miles per gallon on the highway by 
 individual cars in the data set. Highest value of frequency shows that 80 cars 
-have an mgp of about 25-30 on the highway and the lowest value of frequency 
-show that about 4 cars have an mpg of 35-40, and other 4 cars have an mpg of 
-40-45. The rest of cars are allocated in between these quantities.
+have an mgp of about 25-30 on the highway and the lowest value of frequency show 
+that about 4 cars have an mpg of 35-40, and other 4 cars have an mpg of 40-45. 
+The rest of cars are allocated in between these quantities.
 
 **2.**
 
@@ -109,8 +113,9 @@ scatterplot(cty ~ hwy, main= "Scatterplot hwy vs cty", data= mpg)
 
 ```
 
-Most of cars have an mpg to the left of 35. The scatter plot graph shows a proportional relationship between mpg in the city and on the highway. If mpg in 
-the city increases mpg on the highway also increases, but it is usually greater.
+Most of cars have an mpg to the left of 35. The scatter plot graph shows a proportional relationship between mpg in the city and on the highway. If mpg 
+in the city increases mpg on the highway also increases, but it is usually 
+greater.
 
 **3.**
 
@@ -170,7 +175,7 @@ corrplot(Matrix, method = "color", order = "alphabet", type= "lower")
 ```
 
 The data shows that there is a positive correlation between hwy-cty and 
-displ-cyl. There is a negative correlation between cyl-cty, displ-cty, hwy-cyl, 
+displ-cyl. There is a negative correlation between cyl-cty, displ-cty, hwy-cyl,
 and hwy-displ.
 
 These relationships make sense to me because a car with less cylinders will 
