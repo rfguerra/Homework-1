@@ -135,7 +135,7 @@ is usually greater.
 
 make <- table(mpg$manufacturer)
 barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", 
-        ylim= c(0, 40), cex.names = 0.45 )
+        ylim= c(0, 40), cex.names = 0.4 )
 axis(side=2, at=seq(5, 40, by=5))
 
 ```
