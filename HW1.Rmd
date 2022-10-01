@@ -17,9 +17,6 @@ library(car)
 library(corrplot)
 ```
 
-```{r data-import, include= TRUE}
-
-```
 
 ##### Machine Learning Main Ideas
 
