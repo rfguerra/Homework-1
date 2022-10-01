@@ -25,7 +25,7 @@ values. Predicts distinct value labels, discrete.
 **3.**
 
 Two commonly used metrics for regression are Training Mean Squared Error and 
-Test Mean Squared Error.
+Mean Squared Error.
 
 Two commonly used metrics for classification are Training Error Rate and Test 
 Error Rate.
@@ -38,8 +38,8 @@ such as graphs or scatter plots. This can derive details about trends for the in
 Inferential models take significant features to test theories about a 
 collection of data, and determine a connection between predictors and results.
 
-Predictive models use the best fitting combination of features to describe 
-data. They attempt to predict a response Y with reducible and minimized error, without necessarily testing hypothesis.
+Predictive models use the best fitting combination of features to describe data. 
+They attempt to predict a response Y with reducible and minimized error, without necessarily testing hypothesis.
 
 **5.**
 
@@ -69,9 +69,8 @@ of the candidate?" is a predictive question because the model wants to predict
 a response Y from given data with minimal error. It does not attempt to derive hypothesis testing because there is no specific question in the statement 
 derived from the quantitative data.
 
-"How would a voter's likelihood of support for the candidate change if they 
-had personal contact with the candidate?" is an inferential question because 
-it wants to test the effects of the predictors on the outcomes. The 
+"How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?" is an inferential question because it 
+wants to test the effects of the predictors on the outcomes. The 
 experimentation's purpose is to find if there is a relationship between both.
 
 ##### Exploratory Data Analysis
@@ -118,7 +117,8 @@ the city increases mpg on the highway also increases, but it is usually greater.
 ```{r}
 
 make <- table(mpg$manufacturer)
-barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", ylim= c(0, 40), cex.names = 0.45 )
+barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", 
+        ylim= c(0, 40), cex.names = 0.45 )
 axis(side=2, at=seq(5, 40, by=5))
 
 ```
@@ -126,7 +126,8 @@ axis(side=2, at=seq(5, 40, by=5))
 ```{r}
 
 make <- table(mpg$manufacturer)
-barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", xlim= c(0, 40), cex.names = 0.5, horiz= TRUE, las= 1)
+barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", 
+        xlim= c(0, 40), cex.names = 0.5, horiz= TRUE, las= 1)
 axis(side=1, at=seq(5, 40, by=5))
 
 ```
@@ -161,7 +162,8 @@ consume as much gas.
 
 library(corrplot)
 
-Matrix <- cor(mpg[,sapply(mpg,is.numeric)], use='complete.obs', method= 'pearson')
+Matrix <- cor(mpg[,sapply(mpg,is.numeric)], use='complete.obs', 
+              method= 'pearson')
 
 corrplot(Matrix, method = "color", order = "alphabet", type= "lower")
 
@@ -174,5 +176,5 @@ and hwy-displ.
 These relationships make sense to me because a car with less cylinders will 
 achieve a higher mpg in the city and on the highway.
 
-Something surprising is that the car's year doesn't have significant impact 
-on mpg under any factor.
+Something surprising is that the car's year doesn't have significant impact on 
+mpg under any factor.
