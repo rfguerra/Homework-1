@@ -1,5 +1,4 @@
-
-##### Machine Learning Main Ideas
+> ##### Machine Learning Main Ideas
 
 **1.**
 
