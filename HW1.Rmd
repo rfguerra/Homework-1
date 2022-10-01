@@ -1,17 +1,3 @@
----
-title: "Rene Guerra - Homework 1"
-output: pdf_document
-date: 'Sunday, October 2th 2022'
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
-```{r include= FALSE}
-library(tidyverse)
-library(car)
-library(corrplot)
-```
 
 ##### Machine Learning Main Ideas
 
@@ -156,8 +142,8 @@ axis(side=2, at=seq(5, 40, by=5))
 
 ```{r}
 
-make <- table(mpg$manufacturer)
-barplot(make, main= "Car Manufacturer Distribution", col= "darksalmon", 
+make1 <- table(mpg$manufacturer)
+barplot(make1, main= "Car Manufacturer Distribution", col= "darksalmon", 
         xlim= c(0, 40), cex.names = 0.5, horiz= TRUE, las= 1)
 axis(side=1, at=seq(5, 40, by=5))
 
@@ -165,7 +151,9 @@ axis(side=1, at=seq(5, 40, by=5))
 
 ```{r}
 
-make2<-ggplot(mpg, aes(x = reorder(manufacturer, manufacturer,function(x)-length(x))))+ labs(y = "Frequency", x = "Manufacturer") + geom_bar(fill="darksalmon", colour= "black")
+make2<-ggplot(mpg, aes(x = reorder(manufacturer, manufacturer,function(x)-length(x))))+ 
+  labs(y = "Frequency", x = "Manufacturer") + 
+  geom_bar(fill="darksalmon", colour= "black")
 
 make2
 
@@ -178,7 +166,8 @@ data shows that the manufacturer Lincoln produced the least cars.
 
 ```{r}
 
-boxplot(mpg$hwy ~ mpg$cyl, main= "Car mpg on highway by cylinder", ylab= "mpg on highway", xlab= "Number of cylinders", col= "darksalmon")
+boxplot(mpg$hwy ~ mpg$cyl, main= "Car mpg on highway by cylinder", 
+        ylab= "mpg on highway", xlab= "Number of cylinders", col= "darksalmon")
 
 ```
 
