@@ -1,4 +1,20 @@
 
+---
+title: "Rene Guerra - Homework 1"
+output: pdf_document
+date: 'Sunday, October 2th 2022'
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r include= FALSE}
+library(tidyverse)
+library(ggplot2)
+library(car)
+library(corrplot)
+```
+
 ##### Machine Learning Main Ideas
 
 **1.**
