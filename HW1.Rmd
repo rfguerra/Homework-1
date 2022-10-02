@@ -1,28 +1,14 @@
 
----
-title: "Rene Guerra - Homework 1"
-output: pdf_document
-date: 'Sunday, October 2th 2022'
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
-```{r include= FALSE}
-library(tidyverse)
-library(ggplot2)
-library(car)
-library(corrplot)
-```
-
 ##### Machine Learning Main Ideas
 
 **1.**
 
-Supervised learning demonstrates the existence of a response measurement y_i associated to individual measurement observations x_i, i= 1,...,n of the 
+Supervised learning demonstrates the existence of a response measurement y_i 
+associated to individual measurement observations x_i, i= 1,...,n of the 
 predictor. Predicts responses that are known.
 
-Unsupervised learning demonstrates the existence of a collection of measurement observations x_i, i= 1,...,n but there is no associated measurement y_i. Results 
+Unsupervised learning demonstrates the existence of a collection of measurement 
+observations x_i, i= 1,...,n but there is no associated measurement y_i. Results 
 do not reflect stated data.
 
 The difference is that the lack of an associated response in unsupervised 
@@ -49,13 +35,15 @@ Error Rate.
 **4.**
 
 Descriptive models interpret patterns in data by utilizing a visual approach 
-such as graphs or scatter plots. This can derive details about trends for the information.
+such as graphs or scatter plots. This can derive details about trends for the 
+information.
 
 Inferential models take significant features to test theories about a collection 
 of data, and determine a connection between predictors and results.
 
 Predictive models use the best fitting combination of features to describe data. 
-They attempt to predict a response Y with reducible and minimized error, without necessarily testing hypothesis.
+They attempt to predict a response Y with reducible and minimized error, without 
+necessarily testing hypothesis.
 
 **5.**
 
@@ -64,7 +52,8 @@ outcomes in an event. Empirically-driven modeling takes already known results
 from data to derive theories. These models differ in assumption of parametric 
 forms, number of observations, and flexibility. Mechanistic modeling initially 
 assumes a parametric form, it's not exact to the collection of predictors, and 
-it's not flexible with limited parameters. On the other hand, empirically-driven modeling does not assume predictors, requires more observations, and it is 
+it's not flexible with limited parameters. On the other hand, empirically-driven 
+modeling does not assume predictors, requires more observations, and it is 
 flexible. When many parameters are added in the mechanistic model, it derives 
 over fitting similar to empirically-driven data.
 
@@ -83,10 +72,12 @@ variance increases and bias decreases, complexity for the model increases.
 
 "Given a voter's profile/data, how likely is it that they will vote in favor of 
 the candidate?" is a predictive question because the model wants to predict a 
-response Y from given data with minimal error. It does not attempt to derive hypothesis testing because there is no specific question in the statement 
+response Y from given data with minimal error. It does not attempt to derive 
+hypothesis testing because there is no specific question in the statement 
 derived from the quantitative data.
 
-"How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?" is an inferential question because it 
+"How would a voter's likelihood of support for the candidate change if they had 
+personal contact with the candidate?" is an inferential question because it 
 wants to test the effects of the predictors on the outcomes. The 
 experimentation's purpose is to find if there is a relationship between both.
 
@@ -127,7 +118,8 @@ scatterplot(cty ~ hwy, main= "Scatterplot hwy vs cty", data= mpg)
 
 ```
 
-Most of cars have an mpg to the left of 35. The scatter plot graph shows a proportional relationship between mpg in the city and on the highway. If mpg in 
+Most of cars have an mpg to the left of 35. The scatter plot graph shows a 
+proportional relationship between mpg in the city and on the highway. If mpg in 
 the city increases mpg on the highway also increases, but it is usually greater.
 
 **3.**
@@ -152,7 +144,8 @@ axis(side=1, at=seq(5, 40, by=5))
 
 ```{r}
 
-make2<-ggplot(mpg, aes(x = reorder(manufacturer, manufacturer, function(x)-length(x))))+ 
+make2<-ggplot(mpg, aes(x = reorder(manufacturer, manufacturer, 
+                                   function(x)-length(x))))+ 
   labs(y = "Frequency", x = "Manufacturer") + 
   geom_bar(fill="darksalmon", colour= "black")
 
