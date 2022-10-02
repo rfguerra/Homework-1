@@ -1,11 +1,4 @@
 
-```{r include= FALSE}
-library(tidyverse)
-library(ggplot2)
-library(car)
-library(corrplot)
-```
-
 ##### Machine Learning Main Ideas
 
 **1.**
